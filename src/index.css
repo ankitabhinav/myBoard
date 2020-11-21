@@ -1,13 +1,147 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  color: #222;
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 200;
+  margin: 0 50px;
+}
+
+.react-draggable, .cursor {
+  cursor: move;
+}
+.no-cursor {
+  cursor: auto;
+}
+.cursor-y {
+  cursor: ns-resize;
+}
+.cursor-x {
+  cursor: ew-resize;
+}
+
+.react-draggable strong {
+  background: #ddd;
+  border: 1px solid #999;
+  border-radius: 3px;
+  display: block;
+  margin-bottom: 10px;
+  padding: 3px 5px;
+  text-align: center;
+}
+
+.box {
+  background: #fff;
+  border: 1px solid #999;
+  border-radius: 3px;
+  width: 350px;
+  height: 400px;
+  margin: 0px;
+  padding: 0px;
+  
+}
+
+
+/*
+ * RemWrapper needs to take it's styles from this element,
+ * and this element can't have an absolute position after it's kicked in.
+ * AFAIK it's not possible to do this directly in the RemWrapper component.
+ */
+.rem-position-fix {
+  position: static !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hideScrollBar::-webkit-scrollbar {
+  display: none;
+}
+
+.flexRow {
+display:flex;
+flex-direction: row;
+}
+
+.flexCol {
+display:flex;
+flex-direction: column;
+}
+
+.alignCenter {
+align-items: center;
+}
+
+.justifyCenter {
+justify-content: center;
+}
+
+.justifyAround {
+justify-content: space-around;
+}
+
+.justifyEnd {
+  justify-content: flex-end;
+  }
+
+.justifyEvenly {
+  justify-content: space-evenly;
+}  
+
+.justifyBetween {
+justify-content: space-between;
+}
+
+.alignSelfStart {
+align-self:flex-start;
+}
+
+.alignSelfEnd {
+align-self:flex-end;
+}
+
+.justifySelfStart {
+justify-self:flex-start;
+}
+
+.justifySelfEnd {
+ justify-self:flex-end;
+}
+
+.rowAll {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.colAll {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
